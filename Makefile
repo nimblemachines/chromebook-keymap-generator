@@ -19,7 +19,8 @@ dvorak.lua: parse_keymap.lua dvorak_full.map
 	lua parse_keymap.lua < dvorak_full.map > $@
 
 # Because it loads keymaps, this target must be run with write permissions to
-# /dev/console.
+# /dev/console. But because it's loading and printing out two pretty much
+# unchanging keymaps that come with Linux, it only needs to be run once. ;-)
 default_full.map dvorak_full.map:
 	dumpkeys -f > saved_full.map
 	loadkeys --default
@@ -28,3 +29,7 @@ default_full.map dvorak_full.map:
 	dumpkeys -f > dvorak_full.map
 	loadkeys ./saved_full.map
 	rm -f saved_full.map
+
+PHONY: clean
+clean:
+	rm -f *.map qwerty.lua dvorak.lua keycode_xlate.txt
