@@ -32,4 +32,4 @@ default_full.map dvorak_full.map:
 
 PHONY: clean
 clean:
-	rm -f *.map qwerty.lua dvorak.lua keycode_xlate.txt
+	rm -f qwerty.map dvorak.map qwerty.lua dvorak.lua keycode_xlate.txt

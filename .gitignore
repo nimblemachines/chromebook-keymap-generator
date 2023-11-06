@@ -1,4 +1,5 @@
-/*.map
+/qwerty.map
+/dvorak.map
 /qwerty.lua
 /dvorak.lua
 /keycode_xlate.txt
