@@ -179,7 +179,7 @@ else
 end
 
 function fmt(format, ...)
-    print(sttring.format(format, ...))
+    print(string.format(format, ...))
 end
 
 function ignore(...) end
